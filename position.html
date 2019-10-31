@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Position</title>
+    <style>
+        body {
+            height: 1000px;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* fixed: 它的作用是把某个元素固定在某个位置 */
+        .top {
+            position: fixed;
+            z-index: 1000;
+            background-color: red;
+            height: 64px;
+            width: 100%;
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .con {
+            background-color: antiquewhite;
+            height: auto;
+            width: 100%;
+        }
+        .icon {
+            position: relative;
+            background-color: rebeccapurple;
+            top: 20px;
+            left: 20px;
+            height: 80px;
+            width: 80px;
+
+        }
+        .title {
+            position: relative;
+            top: -50px;
+            left: 120px;
+            width: 50%;
+            font-size: 20px;
+            background-color: cadetblue;
+        }
+        /* relative 相对布局，需要结合 top, bottom, left, right使用, 仅设置 relative 是不起作用的 */
+        /* 它不会打破默认的布局方式，只会在默认的布局方式上发生偏移 */
+        .des {
+            position: relative;
+            left: 120px;
+            top: -40px;
+            font-size: 16px;
+            color: #666;
+            width: 50%;
+            background-color: rgb(168, 110, 22);
+        }
+        /* absolute 绝对布局，这种布局方式会使元素脱离原有的流式布局，打破原有的布局方式 */
+        /* 使用绝对布局这个 div 就脱离了流式布局，并移动到了左上角，原来的流式布局也不会给原来的 div 流有任何空间 */
+        /* .des {
+            position: absolute;
+            top: 0px;
+            left:0px;
+            font-size: 16px;
+            color: #666;
+            background-color: blanchedalmond;
+        } */
+        .time {
+            position: absolute;
+            top: 30px;
+            right: 10px;
+            width: 40px;
+            font-size: 16px;
+            color: #666;
+            background-color: chartreuse;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="top">我是大标题</div>
+    <div class="con">
+        <div class="icon"></div>
+        <div class="title">File Transfer</div>
+        <div class="des">position布局</div>
+        <div class="time">10:00</div>
+    </div>
+    <!-- <div class="div1"></div> -->
+</body>
+
+</html>

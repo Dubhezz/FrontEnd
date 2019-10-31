@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HTML 常用标签查询：https://leohxj.gitbooks.io/front-end-database/html-and-css-basic/common-tag.html -->
+<head>
+    <!-- 定义页面的编码方式 -->
+    <!-- meta 标签详情： -->
+    <meta charset="UTF-8">
+    <!-- viewport 为可视区域，他的宽度为设备的宽度 （支持HTML5） -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- http-equiv 表示执行一个命令，下面设置 HTTP 的 content-tyoe -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 页面的描述信息，可供搜索引擎显示 -->
+    <meta name="description" content="前端学习">
+    <title>HTML结构</title>
+    <!-- 通过 script 标签定义 JavaScript 内容 -->
+    <script>
+        let name = "前端学习"
+        console.log(name)
+    </script>
+    <!-- 通过 onload 方法监听页面加载完成 -->
+    <script>
+        window.onload = function() {
+            console.log("window loaded")
+        }
+    </script>
+</head>
+
+<body>
+    <p>前端记录</p>
+    <p>浏览器中查看 DOM 结构， Console -> document</p>
+    <p>浏览器不能直接理解HTML，需要将HTML转换成DOM，HTML和DOM是不一样的，虽然看起来差别不大，DOM可以理解成内存中的树状结构，可以通过 JavaScript来动态获取某个节点</p>
+    <p>Head 标签: head标签中的内容是为了描述网页「额外」信息，主要给浏览器或者搜索引擎使用的。具体展示给用户的信息是在 body 中定义的，其中比较重要的是元数据标签 meta (通过类似于key,value的形式提供不同的内容)</p>
+    <p>定义 meta 标签: 用来定义一些源数据，提供网站的基本信息，供搜索引擎抓取，还可以做SEO(暂时不知道是什么东西)</p>
+    <p>定义 CSS 样式: 可以通过 style 标签或者 link 的方式引入</p>
+    <p>定义 JvaScript 内容，可以通过 script 或者 link 的方式引入，需要强调一点，head 中定义的 JavaScript 将会在页面加载之前执行，会阻塞页面加载，所以往往把 JavaScript 定义在 Body 标签中 </p>
+    <p>定义 title 标签</p>
+    
+    <script>
+        console.log("body is")
+    </script>
+</body>
+
+</html>
