@@ -7,7 +7,7 @@ let titles = [
 ]
 
 let addText = function() {
-    let index = Math.floor(Math.random * titles.length + 0);
+    let index = Math.floor(Math.random() * titles.length + 0);
     let div = document.createElement("div");
     let textNode = document.createTextNode(titles[index]);
     div.appendChild(textNode);
